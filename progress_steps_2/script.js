@@ -19,13 +19,13 @@ function handleProgress(e) {
   progressLine.style.width = `${(stepCount - 1) * 33.3}%`;
 
   steps.forEach((step, index) => {
-    if (index < stepCount ) {
+    if (index < stepCount) {
       step.style.borderColor = "rgb(48, 192, 228)";
     } else {
       step.style.borderColor = "#bbb";
     }
   });
-  
+
   if (stepCount == 1) {
     prevButton.disabled = true;
   } else if (stepCount == 4) {
