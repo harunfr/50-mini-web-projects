@@ -25,10 +25,8 @@ body {
   border: 3px solid #bbb;
   z-index: 1;
   background-color: #fff;
-  transition: border-color 0.3s ease-in ;
+  transition: border-color 0.3s ease-in;
 }
-
-
 
 .buttons {
   display: flex;
@@ -54,12 +52,15 @@ body {
   color: #fff;
   cursor: pointer;
 }
+button:disabled {
+  cursor: not-allowed;
+  background: #bbb;
+}
 .next {
   padding: 8px 27px;
 }
 
-.step1,
-.step.active {
+.step:nth-of-type(1) {
   border-color: rgb(48, 192, 228);
 }
 
@@ -67,15 +68,15 @@ body {
   border: 2px solid #bbb;
   width: 100%;
   position: absolute;
+  width: calc(100% - 1vw);
 }
 
-.progress-line { 
+.progress-line {
   position: absolute;
   left: 0;
   content: "";
   border: 2px solid rgb(48, 192, 228);
   width: 0;
   transform: translateY(-50%);
-  transition: width 0.3s ease-in ;
+  transition: width 0.3s ease-in;
 }
-
