@@ -1,0 +1,81 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 60px;
+}
+
+.line-and-steps {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.step {
+  border-radius: 50%;
+  padding: 4px 8px;
+  border: 3px solid #bbb;
+  z-index: 1;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in ;
+}
+
+
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-family: "Roboto" sans-serif;
+  font-size: 17px;
+  border-radius: 16px;
+  border: none;
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  cursor: pointer;
+}
+.next {
+  padding: 8px 27px;
+}
+
+.step1,
+.step.active {
+  border-color: rgb(48, 192, 228);
+}
+
+.line {
+  border: 2px solid #bbb;
+  width: 100%;
+  position: absolute;
+}
+
+.progress-line { 
+  position: absolute;
+  left: 0;
+  content: "";
+  border: 2px solid rgb(48, 192, 228);
+  width: 0;
+  transform: translateY(-50%);
+  transition: width 0.3s ease-in ;
+}
+
