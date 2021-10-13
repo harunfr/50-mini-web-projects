@@ -2,6 +2,38 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-input {
+  cursor: pointer;
+  width: 70px;
+  height: 34px;
+  border-radius: 8px;
+  border: 2px solid black;
+  transition: width 0.6s ease-out;
+  outline: none;
+}
+.fa-search {
+  opacity: 0;
+}
+
+form.ready > .search-input {
+  height: 34px;
+  cursor:default;
+  width: 180px;
+}
+
+
+form.ready > .fa-search {
+  margin-left: -30px;
+  cursor:pointer;
+  opacity: 1;
+}
 
 
 
